@@ -367,8 +367,14 @@ services:
       depends_on:
         - php-fpm
       networks:
-        - frontend
-        - backend
+        frontend:
+          aliases:
+            - dashboard.bemyguest.com.sg.local
+            - trading-group.daryledesilva.com.local
+        backend:
+          aliases:
+            - dashboard.bemyguest.com.sg.local
+            - trading-group.daryledesilva.com.local
 
 ### Blackfire ########################################
     blackfire:
